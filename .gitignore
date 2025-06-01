@@ -1,2 +1,21 @@
+# Environnements virtuels
 /venv
+
+# Ignorer certains fichiers à la racine
 /clean_data.csv
+
+# Modèles dans src/models
+/src/models/best_model.pkl
+/src/models/trained_model.pkl
+
+/scaling_model.dill
+/scaling_model.pkl
+/gbrt_model.pkl
+
+# Prédictions dans models
+/models/test_predictions.csv
+
+# Dossiers de données
+/data/raw_data/
+/data/processed_data/
+/data/scaled_data/

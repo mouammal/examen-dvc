@@ -6,7 +6,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
 # Chargement des données
 X_test = pd.read_csv("data/processed_data/X_test.csv")
-X_test_scaled = pd.read_csv("data/processed_data/X_test_scaled.csv")
+X_test_scaled = pd.read_csv("data/scaled_data/X_test_scaled.csv")
 
 y_test = pd.read_csv("data/processed_data/y_test.csv")
 y_test = np.ravel(y_test)
@@ -37,7 +37,7 @@ scores = {
 scores_path = "metrics/scores.json"
 with open(scores_path, "w") as f:
     json.dump(scores, f, indent=4)
-    print("Scores enregistrés dans metrics/test_scores.json")
+print("Scores enregistrés dans metrics/test_scores.json")
 
 # Sauvegarde des prédictions
 df_preds = X_test.copy()

@@ -2,7 +2,7 @@ import pandas as pd
 import joblib
 
 # Chargement des données scalées
-X_train_scaled = pd.read_csv("data/processed_data/X_train_scaled.csv")
+X_train_scaled = pd.read_csv("data/scaled_data/X_train_scaled.csv")
 y_train = pd.read_csv("data/processed_data/y_train.csv")
 
 # Chargement du meilleur modele trouvé par GridSearchCV

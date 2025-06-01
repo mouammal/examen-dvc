@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import GridSearchCV
 
 # Chargement des données
-X_train_scaled = pd.read_csv("data/processed_data/X_train_scaled.csv")
+X_train_scaled = pd.read_csv("data/scaled_data/X_train_scaled.csv")
 y_train = pd.read_csv("data/processed_data/y_train.csv")
 
 # y_train est un dataframe à une seule colonne, on le convertit en vecteur

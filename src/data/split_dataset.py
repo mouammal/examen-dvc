@@ -17,6 +17,7 @@ def split_data(df):
 
 
 def save_dataframes(X_train, X_test, y_train, y_test, output_folderpath):
+    os.makedirs(output_folderpath, exist_ok=True)
     # Save dataframes to their respective output file paths
     for file, filename in zip([X_train, X_test, y_train, y_test], ['X_train', 'X_test', 'y_train', 'y_test']):
         output_filepath = os.path.join(output_folderpath, f'{filename}.csv')

@@ -26,6 +26,7 @@ def scale_datasets(X_train, X_test):
     return X_train_scaled, X_test_scaled
 
 def save_dataframes(X_train_scaled, X_test_scaled, output_folderpath):
+    os.makedirs(output_folderpath, exist_ok=True)
     # Save dataframes to their respective output file paths
     for file, filename in zip([X_train_scaled, X_test_scaled], ['X_train_scaled', 'X_test_scaled']):
         output_filepath = os.path.join(output_folderpath, f'{filename}.csv')
@@ -43,5 +44,5 @@ X_test = import_dataset(test_path)
 X_train_scaled, X_test_scaled = scale_datasets(X_train, X_test)
 
 # Save dataframes to their respective output file paths
-output_filepath =  "./data/processed_data"
+output_filepath =  "./data/scaled_data"
 save_dataframes(X_train_scaled, X_test_scaled, output_filepath)
